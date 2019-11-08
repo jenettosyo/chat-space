@@ -1,0 +1,90 @@
+.contents{
+  display: block;
+  box-sizing: border-box;
+
+  &__main{
+    width: calc(100vw - 300px);
+    height: 100%;
+    float: left;
+
+    &__header{
+      height: 100px;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: solid 1px #eee;
+      overflow: scroll;
+      position: relative;
+
+        &__leftbox{
+          margin-top: 35px;
+
+          &__text{
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+          }
+
+          &__text2{
+            font-size: 12px;
+            display: flex;
+            color: #999999;
+          }
+        }
+
+        &__rightbox{
+          height: 40px;
+          line-height: 40px;
+          padding: 0 20px;
+          margin-top: 30px;
+          border: solid 1px #38aef0;
+          position: absolute;
+          right: 40px;
+          color: #38aef0;
+          position: absolute;
+        }
+    }
+
+    &__messages{
+      height: 507px;
+      width: calc(100vw - 300px);
+      padding: 46px 40px;
+      background-color: #fafafa;
+      overflow: scroll;
+
+        &__data{
+          width: 632px;
+          height: 55px;
+          padding-bottom: 40px;
+
+            &__info{
+              width: 632px;
+              height: 18px;
+              display: flex;
+              margin-bottom: 10px;
+
+              &__talker{
+                color: #434a54;
+                font-size: 16px;
+                font-weight: bold;
+              }
+
+              &__date{
+                color: #999999;
+                font-size: 12px;
+                margin-left: 10px;
+              }
+            }
+
+            &__text{
+              width: 632px;
+              height: 17px;
+              margin-bottom: 10px;
+              color: #434a54;
+              font-size: 14px;
+            }
+        }
+    }
+
+  }
+}
