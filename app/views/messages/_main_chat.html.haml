@@ -1,3 +1,4 @@
+
 .contents
   .contents__main
     .contents__main__header
@@ -19,12 +20,10 @@
         .contents__main__messages__data__text
           kkok
     .contents__main__form
-      .contents__main__form__new-message
-        .contents__main__form__new-message__input
-          .contents__main__form__new-message__input__box
-            kkkk
-          .contents__main__form__new-message__input__image
-            %label{class: "input-box__image"}
-            %i.fa.fa-image
-        .contents__main__form__new-message__submit
-          Send
+      = form_for [@group, @message] do |f|
+        = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+        .contents__main__form__mask
+          = f.label :image, class: 'form__mask__image' do
+            = icon('fas', 'image', class: 'icon')
+            = f.file_field :image, class: 'hidden'
+        = f.submit 'Send', class: 'form__submit'
