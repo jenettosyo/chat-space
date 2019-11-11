@@ -3,42 +3,17 @@
     .contents__left__header
       .contents__left__header__box
         .contents__left__header__box__name
-          hhhhhhhh
+          = current_user.name
         .contents__left__header__box__aikon
-          <i class="far fa-edit"></i>
-          <i class="fas fa-cog"></i>
+          = link_to new_group_path do
+            <i class="far fa-edit"></i>
+          = link_to edit_group_path(current_user) do
+            <i class="fas fa-cog"></i>
     .contents__left__groups
-      .contents__left__groups__group
-        .contents__left__groups_group__name
-          sssss
-        .contents__left__groups_group__message
-          no
-
--# .side-bar
--#   .header
--#     %h3.header__name
--#       = current_user.name
--#       ユーザーネーム
--#     %ul.header__lists
--#       %li.list
--#         = link_to do
--#           = fa_icon 'pencil-square-o', class: 'icon'
--#       %li.list
--#         = link_to edit_user_path(current_user) do
--#           = fa_icon 'cog', class: 'icon'
--#   .groups
--#     .group
--#       .group__name
--#         グループ名
--#       .group__message
--#         新着メッセージ
--#     .group
--#       .group__name
--#         グループ名
--#       .group__message
--#         新着メッセージ
--#     .group
--#       .group__name
--#         グループ名
--#       .group__message
--#         新着メッセージ
+      - current_user.groups.each do |group|
+        .contents__left__groups__group
+          = link_to groups_path(group) do
+            .contents__left__groups_group__name
+              = group.name
+            .contents__left__groups_group__message
+              メッセージはまだありません。
