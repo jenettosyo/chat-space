@@ -11,14 +11,8 @@
         Edit
 
     .contents__main__messages
-      .contents__main__messages__data
-        .contents__main__messages__data__info
-          .contents__main__messages__data__info__talker
-            sho
-          .contents__main__messages__data__info__date
-            2019/11/06
-        .contents__main__messages__data__text
-          kkok
+      = render @messages
+
     .contents__main__form
       = form_for [@group, @message] do |f|
         = f.text_field :content, class: 'form__message', placeholder: 'type a message'
