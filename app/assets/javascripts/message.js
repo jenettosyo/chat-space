@@ -1,6 +1,6 @@
 $(function(){
   function buildMessage(message){
-    var image = message.image? `<img src = ${message.image} ></img>`:"";
+    var image = message.image? `<img src = ${message.image} >`:"";
     var html = `<div class="contents__main__messages__data">
                   <div class="contents__main__messages__data__info">
                     <div class="contents__main__messages__data__info__talker">
