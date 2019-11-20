@@ -6,9 +6,9 @@
           = current_user.name
         .contents__left__header__box__aikon
           = link_to new_group_path do
-            <i class="far fa-edit"></i>
+            <i class="far fa-edit" style="color:white;"></i>
           = link_to edit_user_registration_path do
-            <i class="fas fa-cog"></i>
+            <i class="fas fa-cog" style="color:white;"></i>
     .contents__left__groups
       - current_user.groups.each do |group|
         .contents__left__groups__group
