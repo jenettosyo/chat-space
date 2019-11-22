@@ -10,17 +10,18 @@
     align-items: center;
     box-sizing: border-box;
     float: left;
+    color: #ffffff;
 
     &__groups{
       padding: 20px 20px 0;
       height: calc(100vh - 100px);
       overflow: scroll;
+      color: #ffffff;
 
       &__group{
         width: 260px;
         height: 39px;
         margin-bottom: 40px;
-
         &__name{
           width: 260px;
           height: 17px;
@@ -31,7 +32,11 @@
 
         &__message{
           font-size: 11px;
+          color: #ffffff;
         }
+      }
+      &__group a{
+        text-decoration: none;
       }
     }
 
