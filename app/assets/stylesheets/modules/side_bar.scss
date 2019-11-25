@@ -53,7 +53,12 @@
         font-weight: 700;
         display: flex;
         color: #ffffff;
+        &__aikon a{
+          
+            text-decoration: none;
+        }
       }
+      }
+      
     }
   }
-}

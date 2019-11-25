@@ -58,8 +58,8 @@ $(function(){
         messages.forEach(function(message){
           insertHTML = buildMessage(message);
           $(".contents__main__messages").append(insertHTML);
+          $(".contents__main__messages").animate({scrollTop: $(".contents__main__messages")[0].scrollHeight}, 'fast');
         })
-        $(".contents__main__messages").animate({scrollTop: $(".contents__main__messages")[0].scrollHeight}, 'fast');
       })
       .fail(function(){
         alert("エラー");
